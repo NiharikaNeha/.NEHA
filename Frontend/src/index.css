@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Theme tokens — used by components */
+:root{
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --accent: #2b6cb0;
+  --border: #e6e9ee;
+}
+
+/* dark theme tokens */
+.dark {
+  --bg: #0b1220;
+  --surface: #071025;
+  --muted: #9ca3af;
+  --text: #e6eef8;
+  --accent: #2b6cb0;
+  --border: #10202b;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* small helper for 3D card */
+.perspective-800 { perspective: 800px; }
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(.2,.9,.3,1), box-shadow 0.35s;
+  will-change: transform;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.card-3d:hover {
+  transform: rotateX(6deg) rotateY(-6deg) translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.12);
+}
+
+/* subtle floating animation */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.float-slow { animation: floaty 6s ease-in-out infinite; }
+
+/* modal backdrop */
+.modal-backdrop {
+  background: rgba(2,6,23,0.6);
+}
+
+/* theme-aware utility (example) */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
