@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import { motion } from "framer-motion";
 
 const projects = [
