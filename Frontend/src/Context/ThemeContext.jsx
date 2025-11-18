@@ -7,8 +7,11 @@ export const ThemeProvider = ({ children }) => {
     try {
       const saved = localStorage.getItem('theme')
       if (saved) return saved
-      // system preference fallback
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+
+      return window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
     } catch {
       return 'light'
     }
@@ -16,11 +19,13 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const root = document.documentElement
+
     if (theme === 'dark') {
       root.classList.add('dark')
     } else {
       root.classList.remove('dark')
     }
+
     try {
       localStorage.setItem('theme', theme)
     } catch {}
@@ -38,4 +43,3 @@ export const useTheme = () => {
   if (!ctx) throw new Error('useTheme must be used within ThemeProvider')
   return ctx
 }
-    
