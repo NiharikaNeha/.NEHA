@@ -1,26 +1,31 @@
+// src/components/About.jsx
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        className="text-3xl font-semibold mb-6"
-      >
-        About Me
-      </motion.h2>
+    <section id="about" className="py-20 px-8 bg-black">
+      <div className="max-w-4xl mx-auto">
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        className="text-gray-300 leading-relaxed"
-      >
-        I am a dedicated developer who enjoys turning ideas into functional,
-        user-friendly web applications. I focus on clean UI, scalable
-        architecture, and smooth user interaction.
-      </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl font-bold text-white mb-6"
+        >
+          About Me
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-gray-300 leading-relaxed text-lg"
+        >
+          I'm a frontend developer passionate about clean UI, smooth animations,
+          and building user-friendly web experiences.  
+          I work with React, Tailwind, Framer Motion and love exploring modern UI patterns.
+        </motion.p>
+      </div>
     </section>
   );
 };
