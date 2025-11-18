@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
 
 const ResumeButton = () => {
   return (
@@ -10,7 +10,7 @@ const ResumeButton = () => {
       whileTap={{ scale: 0.95 }}
       className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg flex items-center gap-2 text-sm shadow-md transition"
     >
-      <FaDownload />
+      <FaFileDownload />
       Resume
     </motion.a>
   );
