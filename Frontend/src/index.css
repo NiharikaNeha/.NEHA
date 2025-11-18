@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Font */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Theme tokens — used by components */
 :root{
   --bg: #ffffff;
